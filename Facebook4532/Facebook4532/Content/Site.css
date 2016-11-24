@@ -1,0 +1,357 @@
+﻿body {
+    background-color:#E5F4F4;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.publicaciones{
+    position:relative;
+    background-color:white;
+    height:100px; 
+    top:120px;
+    border-radius: 6px;
+    border:1px solid #dedada;
+}
+.listapublicacion{
+    background-color:white;    
+    position:relative;
+    left:0px;
+    top:140px;
+    background-color:white;
+    border-radius: 6px;
+    border:1px solid #dedada;
+}
+.formatolistas{
+    border:1px solid #dedada;
+    height:200px;
+}
+.imagen-publicacion-dentro{
+    position:relative;
+    top:20px;
+    left:15px;
+    font-weight:bold;
+    line-height: 18px;
+    max-height:50px;
+    max-width:50px;
+}
+.imagen-publicacion-ppal{
+    position:relative;
+    top:-15px;
+    left:-53px;
+    font-weight:bold;
+    line-height: 18px;
+    height:50px;
+    width:60px;
+    max-height:50px;
+    max-width:60px;
+}
+.nombre-usuario{
+    position:relative;
+    top:-10px;
+    left:90px;
+    font-weight:bold;
+    font-size:23px;
+    line-height: 18px;
+    color:#365899;
+}
+.contenido-publicacion{
+    position:relative;
+    left:17px;
+    top:35px;
+    max-width:400px;
+}
+.bton-like{
+    position:relative;
+    left:10px;
+    top:72px;
+    background-color: #365899;
+    border-color: #365899;
+    color: #fff;
+    width:90px;
+    height:30px;
+}
+.mg{
+    position:relative;
+    top:77px;
+    left:20px;
+    color: #365899;
+    border-color: #365899;
+    font-size:22px;
+}
+.coment{
+    position:relative;
+    left:70px;
+    top:72px;
+    width:40px;
+}
+.login{
+    position:relative;
+    top:80px;
+}
+.div-ppal{
+    position:relative;
+    top:0px;
+}
+.barra-publicar{
+    position:relative;
+    left:70px;
+    top:15px;
+}
+.desc-publicar{
+    position:relative;
+    top:22px;
+    left:36px;
+    width:500px;
+}
+.desc-coment{
+    position:relative;
+    top:72px;
+    left:80px;
+    width:500px;
+}
+
+.bton-publicar{
+    position:relative;
+    left:80px;
+    top:22px;
+    background-color: #365899;
+    border-color: #365899;
+    color: #fff;
+    width:90px;
+}
+.ingresar{
+    position:relative;
+    left:135px;
+    top:65px;
+    border-color: white;
+    color:#365899;
+    font-family:'Times New Roman', Times, serif;
+}
+.correo-login{
+    position:relative;
+    left:140px;
+    top:75px;
+}
+.bton-login{
+    position:relative;
+    left:5px;
+    top:120px;
+    background-color: #365899;
+    border-color: #365899;
+    color: #fff;
+    width:90px;
+}
+.bton-logout{
+    position:relative;
+    left:220px;
+    background-color: #365899;
+    border-color: #365899;
+    color: #fff;
+    width:90px;
+}
+.registrar{
+    position:relative;
+    left:115px;
+    border-color: white;
+    color:#365899;
+    font-family:'Times New Roman', Times, serif;
+}
+.registro{
+    position:relative;
+    top:210px;
+    left:10px;
+}
+.reg-nom{
+    position:relative;
+    left:130px;
+    top:15px;
+}
+.reg-ape{
+    position:relative;
+    left:-40px;
+    top:55px;
+}
+.reg-img{
+    position:relative;
+    left:-212px;
+    top:130px;
+}
+.reg-email{
+    position:relative;
+    left:130px;
+    top:70px;
+}
+.bton-reg{
+    position:relative;
+    top:155px;
+    background-color: #365899;
+    border-color: #365899;
+    color: #fff;
+    width:90px;
+}
+.col1{
+    position:relative;
+    top:115px;
+}
+.Titulos{
+    color: #666;
+    
+}
+.Eventos{
+    color: #333;
+}
+.img-pppal{
+    position:relative;
+    top:5px;
+}
+.boton{
+    position:relative;
+    top:-125px;
+    left:70px;
+
+}
+.boton2{
+    position:relative;
+    top:-125px;
+    left:70px;
+}
+.letra1{
+    position:relative;
+    top:-124px;
+    left:75px;
+    color: #90949c;
+}
+.letra2{
+    position:relative;
+    top:-123px;
+    right:-75px;
+    color: #90949c;
+}
+.dentro-boton{
+    color: #4b4f56;
+}
+.nom-ami{
+    position:relative;
+    bottom:92px;
+    left:76px;
+    color: #365899;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+
+}
+.cambiar{
+    position:relative;
+    font-size: 13px;
+    left:15px;
+    color: #365899;
+}
+.cambiar1{
+     position:relative;
+    font-size: 13px;
+    left:55px;
+    color: #365899;
+}
+
+.mover{
+    position:relative;
+    bottom:655px;
+    left:10px;
+}
+.mover1{
+    position:relative;
+    bottom:750px;
+    left:10px;
+}
+.mover2{
+    position:relative;
+    bottom:940px;
+    left:10px;
+}
+.mover3{
+    position:relative;
+    bottom:850px;
+    left:10px;
+}
+.mover4{
+    position:relative;
+    bottom:1030px;
+    left:10px;
+}
+.Imagen-perfil{
+    max-width: 55px;
+    height: 55px;      
+    background-size: 100%;
+    left:10px;
+    position: relative;
+    top:-20px;
+    border-radius: 6px;
+}
+.amig{
+    position:relative;
+    left: 10px;
+    top:-20px;
+    color: #90949c;
+    font-size: 11px;
+}
+.amig1{
+    position:relative;
+    top:-880px;
+    color: #90949c;
+    font-size: 11px;
+    left:20px;   
+}
+.leonidas{
+    position:relative;
+    top:-565px;
+    left:10px;
+}
+.pie{
+    position:relative;
+    top:-1145px;
+    left:20px;
+    font-size:12px;
+    color: #90949c;
+}
+.foot{
+    position:relative;
+    top:-1175px;
+    left:20px;
+    font-size:12px;
+     color: #365899;
+}
+.foot1{
+    position:relative;
+    left:250px;
+    top:-1180px;
+    font-size:18px;
+    
+}
+.español{
+     color: #365899;
+}
+.afterlogin{
+    position:relative;
+    left:20px;
+    top:69px;
+}
+
+
+

@@ -1,0 +1,225 @@
+﻿<div ng-app="app">
+    <div ng-controller="Controlador1">
+        <div class="col-md-3">
+            <div class="col1" id="col1" style="display:none">
+                <h4 class="Titulos">FAVORITOS</h4>
+                <div class="row">
+                    <span class="glyphicon glyphicon-home" style="color:#0094ff" aria-hidden="true"></span>
+                    <span class="Eventos">Ultimas noticias </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-envelope" style="color:#00ffff" aria-hidden="true"></span>
+                    <span class="Eventos">Mensajes </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-bookmark" style="color:#ff1f00" aria-hidden="true"></span>
+                    <span class="Eventos">Guardado </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-briefcase" style="color:#0fb52b" aria-hidden="true"></span>
+                    <span class="Eventos">Tiendas </span>
+                </div>
+                <h4 class="Titulos">APLICACIONES</h4>
+                <div class="row">
+                    <span class="glyphicon glyphicon-facetime-video" style="color:#808080" aria-hidden="true"></span>
+                    <span class="Eventos">Video en directo </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-th" style="color:#808080" aria-hidden="true"></span>
+                    <span class="Eventos">Juegos </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-screenshot" style="color:#ffac00" aria-hidden="true"></span>
+                    <span class="Eventos">Shadowgun: Deadzone </span>
+                </div>
+                <div class="row">
+
+                    <span class="glyphicon glyphicon-fire" style="color:#000000" aria-hidden="true"></span>
+                    <span class="Eventos">Pool Live Tour </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-pencil" style="color:#ffe200" aria-hidden="true"></span>
+                    <span class="Eventos">Sugerir cambios </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-globe" style="color:#266281" aria-hidden="true"></span>
+                    <span class="Eventos">Globe game </span>
+                </div>
+                <h4 class="Titulos">GRUPOS</h4>
+                <div class="row">
+                    <span class="glyphicon glyphicon-bullhorn" style="color:#0fb52b" aria-hidden="true"></span>
+                    <span class="Eventos">Chismes chismes </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-wrench" style="color:#808080" aria-hidden="true"></span>
+                    <span class="Eventos">Programadores </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-forward" style="color:#4900ff" aria-hidden="true"></span>
+                    <span class="Eventos">Video flechas </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-plus-sign" style="color:#00fff7" aria-hidden="true"></span>
+                    <span class="Eventos">Crear grupo </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-filter" style="color:#0094ff" aria-hidden="true"></span>
+                    <span class="Eventos">Descubrir grupos </span>
+                </div>
+                <h4 class="Titulos">PAGINAS</h4>
+                <div class="row">
+                    <span class="glyphicon glyphicon-tasks" style="color:#ffac00" aria-hidden="true"></span>
+                    <span class="Eventos">Noticias de paginas&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;30 </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-filter" style="color:#ffe200" aria-hidden="true"></span>
+                    <span class="Eventos">Descubrir paginas</span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-plus-sign" style="color:#ffac00" aria-hidden="true"></span>
+                    <span class="Eventos">Crear Paginas </span>
+                </div>
+                <h4 class="Titulos">EVENTOS</h4>
+                <div class="row">
+                    <span class="glyphicon glyphicon-signal" style="color:#de1b7b" aria-hidden="true"></span>
+                    <span class="Eventos">Suscripciones a eventos </span>
+                </div>
+                <div class="row">
+                    <span class="glyphicon glyphicon-calendar" style="color:#de1b7b" aria-hidden="true"></span>
+                    <span class="Eventos">Crear evento </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-6 div-ppal">
+            <div class="login" id="login">
+                <h1 class="ingresar">INGRESAR</h1>
+                <input class="correo-login" type="text" placeholder="Correo Electronico" ng-model="usu.Email" onclick="this.value=''" />
+                <input class="bton-login" type="button" value="Entrar" ng-click="traerUsuario(usu)" />
+                <div class="registro">
+                    <h1 class="registrar">REGISTRAR</h1>
+                    <input class="reg-nom" type="text" placeholder="Nombre" ng-model="Ru.Nombre" />
+                    <input class="reg-ape" type="text" placeholder="Apellido" ng-model="Ru.Apellido" />
+                    <input class="reg-img" type="text" placeholder="Imagen" ng-model="Ru.UrlPerfil" />
+                    <input class="reg-email" type="text" placeholder="Correo Electronico" ng-model="Ru.Email" />
+                    <input class="bton-reg" type="button" value="Registrar" ng-click="addUsuario(Ru)" />
+                </div>
+            </div>
+            <div class="publicaciones" id="publicaciones" style="display:none">
+                <div class="barra-publicar"> 
+                    <input class="desc-publicar" type="text" maxlength="150" placeholder="¿Qué está pasando?" ng-model="p.Descripcion" onclick="this.value=''" />
+                    <input class="bton-publicar" type="button" value="Publicar" ng-click="addPublicacion(p)" />
+                    <div ng-repeat="up in usuarioactual">
+                        <img class="imagen-publicacion-ppal" src="{{up.UrlPerfil}}">
+                    </div>
+                </div>
+            </div>
+            <div class="listapublicacion" id="listapublicacion">
+                <div class="formatolistas" ng-repeat="p in publicaciones">
+                    <div class="imagen-publicacion">
+                        <img class="imagen-publicacion-dentro" src="{{p.Usuario.UrlPerfil}}">
+                    </div>
+                    <div class="nombre-usuario">
+                        <span>{{p.Usuario.Nombre}}</span>
+                        <span>{{p.Usuario.Apellido}}</span>
+                    </div>
+                    <div class="contenido-publicacion">
+                        <p>{{p.Descripcion}}</p>
+                    </div>
+                    <input class="bton-like" type="button" value="Me gusta" ng-click="Megusta(p)" />
+                    <span class="mg">{{p.MeGusta}}</span>
+                    <button type="button" class="btn btn-default coment" aria-label="Left Align" >
+                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    </button>
+                    <input class="desc-coment" type="text" maxlength="150" placeholder="Escribe un comentario..." onclick="this.value=''" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="afterlogin" id="afertlogin" style="display:none">
+                <div id="logout" style="display:none">
+                    <input class="bton-logout" type="button" value="Salir" ng-click="cerrarsesion()" />
+                </div>
+
+                <br />
+                <h4 class="amig" style="border:1px solid #dedada; width:300px; height:600px; top:0px;">PERSONAS QUE QUIZA CONOZCAS<span class="cambiar"> Ver Todas</span></h4>
+                <div class="leonidas">
+                    <img class="img-responsive Imagen-perfil" src="https://lh6.googleusercontent.com/proxy/l9pF_B95lHDW5DMnejuEjur_rbMcTDqMb_FvbhhaZGX4j3QIMLd1GtLpSAAhz_PK-eKCTjXCd9HIQkHykgiS3l5jtEsL_RdDTFPX14oeOgqtExdW3_C4zFaO=s0-d" />
+                    <h4 class="nom-ami">Leonidas</h4>
+                    <br />
+                    <span class="letra1">2 amigos en comun</span>
+                    <button type="button" class="btn btn-default bot-seg boton">
+                        <h class="dentro-boton">Añadir a mis amigos</h>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="mover">
+                    <img class="img-responsive Imagen-perfil" src="http://www.bioenciclopedia.com/wp-content/uploads/2013/10/aguila-calva4-800.jpg" />
+                    <h4 class="nom-ami">Rodolfa A.</h4>
+                    <br />
+                    <span class="letra2">30 amigos en comun</span>
+                    <button type="button" class="btn btn-default bot-seg boton2">
+                        <h class="dentro-boton">Añadir a mis amigos</h>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="mover1">
+                    <img class="img-responsive Imagen-perfil" src="https://pbs.twimg.com/media/CQPW4jEWUAAzRkv.jpg" />
+                    <h4 class="nom-ami">Ms. chimba</h4>
+                    <br />
+                    <span class="letra2">100 amigos en comun</span>
+                    <button type="button" class="btn btn-default bot-seg boton2">
+                        <h class="dentro-boton">Añadir a mis amigos</h>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <br />
+                <h4 class="amig1">SOLICITUDES DE AMISTAD<span class="cambiar1"> Ver Todas</span></h4>
+                <div class="mover3">
+                    <img class="img-responsive Imagen-perfil" src="http://ocioweb.co/wp-content/uploads/2016/05/pabloe.jpg" />
+                    <h4 class="nom-ami">Pablito</h4>
+                    <br />
+                    <span class="letra2">100 amigos en comun</span>
+                    <button type="button" class="btn btn-default bot-seg boton2">
+                        <h class="dentro-boton">Confirmar la solicitud de...</h>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="mover2">
+                    <img class="img-responsive Imagen-perfil" src="http://www.blaugranas.com/media/galeria/25/9/2/7/9/n_f_c_barcelona_ronaldinho-3049729.jpg" />
+                    <h4 class="nom-ami">Ronaldinho</h4>
+                    <br />
+                    <span class="letra2">50 amigos en comun</span>
+                    <button type="button" class="btn btn-default bot-seg boton2">
+                        <h class="dentro-boton">confirmar la solicitud de...</h>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="mover4">
+                    <img class="img-responsive Imagen-perfil" src="https://lh5.googleusercontent.com/-Sv0q6lkSAGM/AAAAAAAAAAI/AAAAAAAAAVA/9wS9aK9rScw/s0-c-k-no-ns/photo.jpg" />
+                    <h4 class="nom-ami">Trumpito</h4>
+                    <br />
+                    <span class="letra2">500 amigos en comun</span>
+                    <button type="button" class="btn btn-default bot-seg boton2">
+                        <h class="dentro-boton">confirmar la solicitud de...</h>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <h4 class="pie">Español(España).<span class="español">Español.English(US)</span></h4><br />
+                <span class="foot1 glyphicon glyphicon-plus" aria-hidden="true"></span>
+
+                <span class="foot">Portugues(Brasil).Francais(France)</span>
+                <h4 class="pie"> Privacidad.Condiciones.Publicidad<br />Gestion de anuncios.Cookies.Mas<br />Facebook©2016</h4>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+    <script type="text/javascript" src="~/Scripts/app.js"></script>
+}
